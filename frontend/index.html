@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transfusion WebApp</title>
+<link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<div class="header">Niederrhein-Klinik</div>
+<div class="subheader">Transfusion - Station 1</div>
+
+
+<!-- LOGIN -->
+<div class="container" id="loginPage">
+  <h1>Personal Anmeldung</h1>
+  <input id="user" type="text" placeholder="Benutzername">
+  <input id="pass" type="password" placeholder="Passwort">
+  <button id="btnLogin">Anmelden</button>
+</div>
+
+<!-- PATIENT -->
+<!-- PATIENT -->
+<div class="container" id="patientPage">
+
+  <h2>Patient finden</h2>
+
+  <!-- PID Scanner -->
+  <label for="pid">Patienten-ID (Scan)</label>
+  <input id="pid" type="text" placeholder="PID scannen...">
+  <button id="btnLoadPatient">Patient laden</button>
+
+  <pre id="patientInfo"></pre>
+
+  <hr>
+
+  <h3>Vorgesehene EKs</h3>
+  <div id="ekList"></div>
+
+  <hr>
+
+  <h3>EK Validierung</h3>
+  <label for="ekScan">EK Barcode scannen</label>
+  <input id="ekScan" type="text" placeholder="EK barcode scannen...">
+
+  <button id="btnValidateEK">EK prüfen</button>
+
+  <pre id="validationResult"></pre>
+
+  <hr>
+
+  <button id="btnTransfuse">
+    Transfusion durchführen
+  </button>
+
+  <pre id="transfusionResult"></pre>
+
+</div>
+
+
+<script src="app.js" defer></script>
+</body>
+</html>

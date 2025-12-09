@@ -1,0 +1,87 @@
+/* GANZE SEITE: weißer Hintergrund */
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;   /* Seite weiß */
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER: nur oben blau (kleine Höhe) */
+.header {
+    width: 100%;
+    background-color: #00bfff; /* blau */
+    color: white;
+    text-align: center;
+    padding: 20px 0;           /* nicht zu groß */
+    font-size: 1.8rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Subheader (Titel unter Krankenhausname) */
+.subheader {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 12px 0 20px 0;
+    color: #003366; /* dunkles blau */
+}
+
+/* Weißer Container für Login / Patientenseite */
+.container {
+    max-width: 700px;
+    margin: 20px auto;        /* Abstand zum Header */
+    padding: 20px 28px;       /* weniger Top-Padding, damit Felder oben sind */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Überschriften innerhalb Container */
+.container h1, .container h2, .container h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Eingabefelder */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #009acd; /* dunkleres blau beim hover */
+}
+
+/* Spezielle Styles für Status */
+.status-ok { color: green; font-weight: 700; }
+.status-error { color: red; font-weight: 700; }
+
+/* Patienten-Seite am Anfang ausblenden */
+#patientPage { display: none; }
+
+/* Kleineres Layout für mobile */
+@media (max-width: 480px) {
+  .container { margin: 12px; padding: 16px; }
+  .header { font-size: 1.4rem; padding: 14px 0; }
+  .subheader { font-size: 1.1rem; }
+}
